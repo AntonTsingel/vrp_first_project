@@ -57,12 +57,12 @@ function clean() {
 function watch() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./src/"
         }
     });
     gulp.watch('./src/css/**/*.css', styles)
     gulp.watch('./src/js/**/*.js', scripts)
-    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("./src/**/*.html").on('change', browserSync.reload);
 }
 
 gulp.task('styles', styles);
