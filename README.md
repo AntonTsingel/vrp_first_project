@@ -7,7 +7,7 @@ Project related to marcup of landing-page.
 1.Clone this link:
 https://github.com/AntonTsingel/vrp_first_project.git
 
-2. On your device create folder and use command 
+2.On your device create folder and use command 
 
 git clone https://github.com/AntonTsingel/vrp_first_project.git to clone files to your folder.
 
