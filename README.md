@@ -6,7 +6,6 @@ https://github.com/AntonTsingel/vrp_first_project.git
 
 git clone https://github.com/AntonTsingel/vrp_first_project.git to your folder.
 
-=======
 Project related to marcup of landing-page.
 
 ## Getting Started
