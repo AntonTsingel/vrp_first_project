@@ -1,6 +1,6 @@
 # vrp_first_project
 
-<<<<<<< HEAD
+
 1.Clone this repo using  this link:
 https://github.com/AntonTsingel/vrp_first_project.git
 
@@ -30,4 +30,4 @@ And run project with command using gulp task "dev"
 ```
 npx gulp dev
 ```
->>>>>>> 9ec0c8a5dd089701e2285e07ea150ffadc34e837
+
