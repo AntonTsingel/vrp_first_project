@@ -13,8 +13,8 @@ const cssFiles =[
 ]
 
 const jsFiles =[
-    './src/js/lib.js',
-    './src/js/main.js'
+    './src/js/main.js',
+    './src/js/lib.js'
 ]
 
 function styles() {

@@ -1,1 +1,1 @@
-function o(o,l){return o*l}console.log(o(4,2)),console.log(o(6,2)),console.log(o(8,2));
+var n=1;function e(e){var l,t=document.getElementsByClassName("mySlides");document.getElementsByClassName("dot");for(e>t.length&&(n=1),e<1&&(n=t.length),l=0;l<t.length;l++)t[l].style.display="none";t[n-1].style.display="block"}e(n);
