@@ -13,11 +13,12 @@ git clone https://github.com/AntonTsingel/vrp_first_project.git to clone files t
 
 ### Installing
 
-3. After addind all files type :
+3. After addind all files write in cmd :
 ```
 npm i
 ```
-This install all required modules. 
+this will install the necessary modules 
+
 And run project with command using gulp task "dev"
 ```
 npx gulp dev
