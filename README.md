@@ -4,7 +4,7 @@
 1.Clone this repo using  this link:
 https://github.com/AntonTsingel/vrp_first_project.git
 
-2.git clone https://github.com/AntonTsingel/vrp_first_project.git to your folder.
+2.Git clone https://github.com/AntonTsingel/vrp_first_project.git to your folder.
 
 Project related to marcup of landing-page.
 
