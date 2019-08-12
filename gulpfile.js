@@ -1,4 +1,3 @@
-    
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
@@ -32,7 +31,7 @@ function styles() {
         level: 2
     }))
 
-    .pipe(gulp.dest('./build/css'))
+    .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());
 }
 
@@ -46,13 +45,13 @@ function scripts() {
         toplevel: true
     }))
     
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
 
 }
 
 function clean() {
-    return del(['build/*'])
+    return del(['dist/*'])
 }
 
 function watch() {
