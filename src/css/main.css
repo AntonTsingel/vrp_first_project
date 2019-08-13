@@ -454,6 +454,8 @@
     padding: 2px;
     background: #ccc;
     cursor: pointer;
+    position: absolute;
+    right: 0px;
   }
   
   .close:hover {
@@ -482,3 +484,6 @@
     overflow: auto;
   }
   
+.container {
+position: relative;
+}

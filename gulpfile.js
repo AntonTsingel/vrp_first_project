@@ -6,12 +6,12 @@ const uglify = require('gulp-uglify');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
-const cssFiles =[
+const cssFiles = [
     './src/css/main.css',
     './src/css/media.css'
 ]
 
-const jsFiles =[
+const jsFiles = [
     './src/js/main.js',
     './src/js/lib.js'
 ]
@@ -57,7 +57,7 @@ function clean() {
 function watch() {
     browserSync.init({
         server: {
-            baseDir: "./src/"
+            baseDir: "./src"
         }
     });
     gulp.watch('./src/css/**/*.css', styles)
