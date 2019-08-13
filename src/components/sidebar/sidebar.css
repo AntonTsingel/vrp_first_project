@@ -1,0 +1,62 @@
+.content__menu > li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 150px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-family: "PTSans" sans-serif;
+    color: rgb(118, 118, 118);
+    line-height: 1.5;
+  }
+  
+  .content__menu > li a{
+    text-decoration: none;
+  }
+  
+  .content__menu_appliances li {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+  .content__menu_appliances li:first-child {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .content__menu a:hover {
+    text-decoration: underline;
+    color: #4a4949;
+  }
+  
+  .price-list {
+    margin-left: 230px;
+    margin-top: 250px;
+    position: relative;
+  }
+  
+  .price-list span {
+    display: block;
+    font-size: 30px;
+    font-family: "PTSans" sans-serif;
+    color: rgb(68, 68, 68);
+    font-weight: bold;
+    line-height: 1.15;
+    position: absolute;
+    width: 201px;
+    height: 27px;
+    left: -30px;
+    bottom: 10px;
+  }
+  
+  
+  .price-list img {
+    position: absolute;
+    top: -140px;
+  
+  }
+  
+  .left-block {
+    float: left;
+  }

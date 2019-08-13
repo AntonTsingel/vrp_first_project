@@ -1,0 +1,23 @@
+.breadcrumbs {
+    margin: 0;
+    padding: 0;
+    margin-left: 180px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: "PTSans" sans-serif;
+    color: rgb(118, 118, 118);
+  }
+  .breadcrumbs li {
+    display: inline-block;
+  }
+  .breadcrumbs li::before {
+    content: '/';
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #767676;
+  }
+  .breadcrumbs li:first-child::before {
+    content: ''; /* Убираем разделитель для первого пункта */
+  }
+  

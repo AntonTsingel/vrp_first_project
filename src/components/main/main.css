@@ -1,0 +1,51 @@
+.center-block {
+    float: right;
+    width: 1000px;
+  
+  }
+  
+  .item {
+    position: relative;
+    height: 380px;
+    width: 250px;
+    background-color: #dcdcdc;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .item_price {
+    font-size: 28px;
+    font-family: "PTSans", sans-serif;
+    color: #444444;
+    font-weight: bold;
+    line-height: 0.6;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 25px;
+  }
+  
+  .item_definition{
+    font-size: 18px;
+    font-family: "PTSans", sans-serif;
+    color: rgb(118, 118, 118);
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .item img {
+    padding: 20px;
+  }
+  
+  .item_price::after {
+    content: "";
+    background-image: url('img/addtobasket_mini.png');
+    width: 28px;
+    height: 21px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 35px;
+    bottom: 15px;
+  
+  }
+  
