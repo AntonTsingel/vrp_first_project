@@ -69,6 +69,11 @@
     font-family: 'PT Sans', sans-serif;
   
   }
+
+  .feedback a:hover {
+    border-color: #585858;
+    color: #585858;
+  } 
   
   .clearfix::after {
     content: "";

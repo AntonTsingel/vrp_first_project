@@ -8,34 +8,74 @@
     <link rel="stylesheet" href="dist/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
+<!--
+<script>  
+function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+            /*make an HTTP request using the attribute value as the file name:*/
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        elmnt.innerHTML = this.responseText;
+                    }
+                    if (this.status == 404) {
+                        elmnt.innerHTML = "Page not found.";
+                    }
+                    /*remove the attribute, and call this function once more:*/
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                }
+            }
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /*exit the function:*/
+            return;
+        }
+    }
+}
+includeHTML();
+</script>
+-->
+
+
 <body link="#767676" vlink="#767676" alink="#767676">
-<header>
-  <div class="header header-top">
+ <!-- <div w3-include-html = "./header/header.html"></div> -->
 
-    <div class="company-name">
-      <a href="#"> <div class="logo"></div> </a>
-      <h2>Название <br>компании</h2>
-      <p>самая клёвая компания</p>
-    </div>
+  <header>
+    <div class="header header-top">
+  
+      <div class="company-name">
+        <a href="#"> <div class="logo"></div> </a>
+        <h2>Название <br>компании</h2>
+        <p>самая клёвая компания</p>
+      </div>
       <div class="feedback">
-      +7(499) 777-77-77<br>
-      +7(499) 777-77-77<br>
-      <a href="#" onclick="show('block')">Обратная связь</a>
+        +7(499) 777-77-77<br>
+        +7(499) 777-77-77<br>
+        <a href="#" onclick="show('block')">Обратная связь</a>
+      </div>
+
     </div>
-
-  </div>
-
-<nav class="menu">
-    <ul class="menu__nav">
-      <li><a href="#">Главная</a></li>
-      <li><a href="#">Каталог</a></li>
-      <li><a href="#">Доставка и оплата</a></li>
-      <li><a href="#">Прайс-лист</a></li>
-      <li class="menu__nav_contacts "><a href="#">Контакты</a></li>
-    </ul>
-</nav>
-
-</header>
+  
+  <nav class="menu">
+      <ul class="menu__nav">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Прайс-лист</a></li>
+        <li class="menu__nav_contacts"><a href="#">Контакты</a></li>
+      </ul>
+  </nav>
+  
+  </header>
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
@@ -60,8 +100,6 @@
   <li><a href="#">Каталог</a></li>
   <li>Бытовая техника</li>
 </ul>
-
-
 
   <div class="content clearfix">
 
@@ -131,7 +169,6 @@
 
   </div>
 
-
 <div class="info">
 Компания «Пиксель Плюс»‎ существует более 6 лет, за это время мы принимали участие в разработке более чем 700
 сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30
@@ -144,7 +181,6 @@
 отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском
 офисе.
 </div>
-
 
 <footer class="page-footer">
 
@@ -168,8 +204,6 @@
     компания «Пиксель Плюс»‎
   </div>
 </footer>
-
-
 
 <div id="window">
   <div class="container">
@@ -199,7 +233,6 @@
 
   </div>
 </div>
-
 
 <div onclick="show('none')" id="gray"></div>
 
@@ -236,6 +269,6 @@ function showSlides(n) {
 
 </script>
 
-<!--<script src="build/js/script.js"></script> -->
+<!--<script src="dist/js/script.js"></script> -->
 </body>
 </html>
