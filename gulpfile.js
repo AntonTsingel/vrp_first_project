@@ -22,7 +22,7 @@ function styles() {
     .pipe(concat('style.css'))
     
     .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
+        overrideBrowserslist: ['last 2 versions'],
         cascade: false
     }))
 
@@ -31,7 +31,7 @@ function styles() {
         level: 2
     }))
 
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('./src/dist/css'))
     .pipe(browserSync.stream());
 }
 
@@ -45,13 +45,13 @@ function scripts() {
         toplevel: true
     }))
     
-    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest('./src/dist/js'))
     .pipe(browserSync.stream());
 
 }
 
 function clean() {
-    return del(['dist/*'])
+    return del(['src/dist/*'])
 }
 
 function watch() {
