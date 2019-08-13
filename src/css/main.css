@@ -426,7 +426,6 @@
     margin: 280px auto;
     background: #fff;
     border: 1px solid #777;
-    border-radius: 15px;
     z-index: 150;
     display: none;
     position: fixed;
@@ -455,7 +454,7 @@
     background: #ccc;
     cursor: pointer;
     position: absolute;
-    right: 0px;
+    right: 5px;
   }
   
   .close:hover {
