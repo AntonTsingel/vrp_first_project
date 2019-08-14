@@ -1,5 +1,5 @@
 <script id="footer-template" type="text/x-handlebars-template"> 
-<footer class="footer">
+<footer class="footer" id="footer">
 
     <div class="footer__left">
       &copy; 2012-2013 ЗАО «Компания»<br>
@@ -21,4 +21,14 @@
       компания «Пиксель Плюс»‎
     </div>
   </footer>
+  </script>
+
+  <script>
+      console.log('footer');
+      var source = document.getElementById("footer-template"); // DOM Node
+      var template = source.innerHTML; // STRING
+      var generator = Handlebars.compile(template); // Function
+      var htmlContent = generator(); // String: template with data
+      var elem = document.getElementById('footer'); // output element: DOM Node
+      elem.innerHTML = htmlContent;
   </script>

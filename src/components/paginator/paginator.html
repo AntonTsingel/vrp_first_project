@@ -1,5 +1,5 @@
 <script id="paginator-template" type="text/x-handlebars-template"> 
-<div class="paginator">
+<div class="paginator" id="paginator">
         <a href="#1">1</a>
         <a href="#2">2</a>
         <a href="#3" class="paginator__current">3</a>
@@ -11,3 +11,13 @@
     </div>
 
 </script>    
+
+<script>
+    console.log('paginator');
+    var source = document.getElementById("paginator-template"); // DOM Node
+    var template = source.innerHTML; // STRING
+    var generator = Handlebars.compile(template); // Function
+    var htmlContent = generator(); // String: template with data
+    var elem = document.getElementById('paginator'); // output element: DOM Node
+    elem.innerHTML = htmlContent;
+</script>

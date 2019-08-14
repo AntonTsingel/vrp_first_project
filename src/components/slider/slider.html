@@ -1,6 +1,6 @@
 <!-- Slideshow container -->
 <script id="slider-template" type="text/x-handlebars-template"> 
-<div class="slideshow-container">
+<div class="slideshow-container" id="slider">
 
     <!-- Full-width images -->
     <div class="mySlides fade">
@@ -15,4 +15,13 @@
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
+  </script>
+  <script>
+      console.log('slider');
+      var source = document.getElementById("slider-template"); // DOM Node
+      var template = source.innerHTML; // STRING
+      var generator = Handlebars.compile(template); // Function
+      var htmlContent = generator(); // String: template with data
+      var elem = document.getElementById('slider'); // output element: DOM Node
+      elem.innerHTML = htmlContent;
   </script>
