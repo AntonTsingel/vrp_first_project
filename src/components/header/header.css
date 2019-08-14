@@ -1,10 +1,10 @@
-.header-top {
+.header {
     background-color: #dcdcdc;
     position: relative;
     height: 200px;
   }
   
-  .company-name {
+  .header__company-name {
     position:absolute;
     width: 273px;
     height: 100px;
@@ -13,7 +13,7 @@
     font-family: 'PT Sans', sans-serif;
   }
   
-  .company-name h2 {
+  .header__company-name h2 {
     left: 220px;
     top: 50px;
     line-height: 0.8;
@@ -21,14 +21,14 @@
     margin: 0;
   }
 
-  .company-name p {
+  .header__company-name p {
     padding: 0;
     margin: 0;
     margin-top: 15px;
     font-size: 18px;
   }
   
-  .company-name a {
+  .header__company-name a {
     position:absolute;
     width: 100px;
     height: 100px;
@@ -37,7 +37,7 @@
     top: 0px;
   }
   
-  .feedback {
+  .header__feedback {
     width: 280px;
     height: 100px;
     position: absolute;
@@ -52,7 +52,7 @@
     font-weight: lighter;
   }
 
-  .feedback a {
+  .header__feedback a {
     text-decoration: none;
     font-weight: bold;
     border-bottom: 2px dashed #777777;
@@ -62,7 +62,7 @@
   
   }
 
-  .feedback a:hover {
+  .header__feedback a:hover {
     border-color: #585858;
     color: #585858;
   } 
