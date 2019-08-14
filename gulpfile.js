@@ -4,7 +4,21 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const del = require('del');
+const rigger = require('gulp-rigger');
 const browserSync = require('browser-sync').create();
+
+
+const htmlComponents = [
+    './src/components/breadcrumbs/breadcrumbs.html',
+    './src/components/feedback/feedback.html',
+    './src/components/footer/footer.html',
+    './src/components/header/header.html',
+    './src/components/info/info.html',
+    './src/components//main/main.html',
+    './src/components/paginator/paginator.html',
+    './src/components/sidebar/sidebar.html',
+    './src/components/slider/slider.html'
+]
 
 const cssFiles = [
     './src/css/main.css',
@@ -72,3 +86,12 @@ gulp.task('del', clean);
 gulp.task('watch', watch);
 gulp.task('build', gulp.series(clean, gulp.parallel(styles,scripts)));
 gulp.task('dev', gulp.series('build', 'watch'));
+
+
+ 
+gulp.task('build', function () {
+   return gulp.src(htmlComponents)
+        .pipe(rigger())
+        .pipe(gulp.dest('build/'));
+});
+
