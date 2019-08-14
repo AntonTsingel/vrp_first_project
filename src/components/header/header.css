@@ -47,7 +47,7 @@
     font-weight: bold;
     line-height: 1.15;
     text-align: right;
-    font-size: 35px;
+    font-size: 32px;
     font-family: 'PT Sans', sans-serif;
     font-weight: lighter;
   }
@@ -92,8 +92,7 @@
     width: 230px;
     height: 30px;
     padding: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+  
     background-color: #777777;
     border-right: 1px solid white;
     text-decoration: none;
@@ -104,7 +103,7 @@
   }
   
   .menu__nav .menu__nav_contacts{
-    border: none;
+    border-right: none;
   }
   
   .menu__nav a:hover{
