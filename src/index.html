@@ -9,7 +9,6 @@
 </head>
 <body>  
   
-<div style = "margin: 0 auto">
   <header id="header"></header>
   <div id="slider"></div>
   <div id="breadcrumbs"></div>
@@ -18,16 +17,6 @@
   <div id="info"></div>
   <div id="footer"></div>
   <div id="window"></div>
-</div>
-
-
-
-
-
-
-
-
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
 
@@ -71,7 +60,7 @@
       var elem = document.getElementById('header'); // output element: DOM Node
       elem.innerHTML = htmlContent;
   </script>
- 
+
 
 
 <!-- Slideshow container -->
@@ -97,8 +86,7 @@
         var source = document.getElementById("slider-template"); // DOM Node
         var template = source.innerHTML; // STRING
         var generator = Handlebars.compile(template); // Function
-        var data = {};
-        var htmlContent = generator(data);
+        var htmlContent = generator();
         var elem = document.getElementById('slider'); // output element: DOM Node
         elem.innerHTML = htmlContent;
     </script>
@@ -118,8 +106,7 @@
         var source = document.getElementById("breadcrumbs-template"); // DOM Node
         var template = source.innerHTML; // STRING
         var generator = Handlebars.compile(template); // Function
-        var data = {};
-        var htmlContent = generator(data); // String: template with data
+        var htmlContent = generator(); // String: template with data
         var elem = document.getElementById('breadcrumbs'); // output element: DOM Node
         elem.innerHTML = htmlContent;
     </script>
@@ -208,8 +195,7 @@
       var source = document.getElementById("main-template"); // DOM Node
       var template = source.innerHTML; // STRING
       var generator = Handlebars.compile(template); // Function
-      var data = {};
-      var htmlContent = generator(data); // String: template with data
+      var htmlContent = generator(); // String: template with data
       var elem = document.getElementById('center-block'); // output element: DOM Node
       elem.innerHTML = htmlContent;
   </script>
@@ -234,8 +220,7 @@
               var source = document.getElementById("info-template"); // DOM Node
               var template = source.innerHTML; // STRING
               var generator = Handlebars.compile(template); // Function
-              var data = {};
-              var htmlContent = generator(data); // String: template with data
+              var htmlContent = generator(); // String: template with data
               var elem = document.getElementById('info'); // output element: DOM Node
               elem.innerHTML = htmlContent;
           </script>
@@ -270,8 +255,7 @@
         var source = document.getElementById("footer-template"); // DOM Node
         var template = source.innerHTML; // STRING
         var generator = Handlebars.compile(template); // Function
-        var data = {};
-        var htmlContent = generator(data); // String: template with data
+        var htmlContent = generator(); // String: template with data
         var elem = document.getElementById('footer'); // output element: DOM Node
         elem.innerHTML = htmlContent;
     </script>
@@ -317,13 +301,10 @@
         var source = document.getElementById("feedback-template"); // DOM Node
         var template = source.innerHTML; // STRING
         var generator = Handlebars.compile(template); // Function
-        var data = {};
-        var htmlContent = generator(data); // String: template with data
+        var htmlContent = generator(); // String: template with data
         var elem = document.getElementById('window'); // output element: DOM Node
         elem.innerHTML = htmlContent;
     </script>
-
-
 
 
     <script src="./components/dist/js/script.js"></script>
