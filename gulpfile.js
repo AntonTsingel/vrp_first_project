@@ -41,7 +41,7 @@ function styles() {
         level: 2
     }))
 
-    .pipe(gulp.dest('./src/components/dist/css'))
+    .pipe(gulp.dest('./src/dist/css'))
     .pipe(browserSync.stream());
 }
 
@@ -55,13 +55,13 @@ function scripts() {
         toplevel: true
     }))
     
-    .pipe(gulp.dest('./src/components/dist/js'))
+    .pipe(gulp.dest('./src/dist/js'))
     .pipe(browserSync.stream());
 
 }
 
 function clean() {
-    return del(['./src/components/dist/*'])
+    return del(['./src/dist/*'])
 }
 
 function watch() {
