@@ -13,6 +13,7 @@
   
   .content__menu > li a{
     text-decoration: none;
+    color: rgb(118, 118, 118);
   }
   
   .content__menu_appliances li {
