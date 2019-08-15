@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="components/header/header.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="./components/dist/css/style.css">
   <title>Document</title>
 </head>
 <body>  
   <header id="header"></header>
-  
+  <div id="content"></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
 
 <script id="header-template" type="text/x-handlebars-template"> 
@@ -40,7 +40,7 @@
   </script>
   
   <script>
-      console.log('bla bla bla');
+      console.log('header');
       var source = document.getElementById("header-template"); // DOM Node
       var template = source.innerHTML; // STRING
       var generator = Handlebars.compile(template); // Function
@@ -53,6 +53,8 @@
       var elem = document.getElementById('header'); // output element: DOM Node
       elem.innerHTML = htmlContent;
   </script>
+ 
+  
   </body>
 
   </html>

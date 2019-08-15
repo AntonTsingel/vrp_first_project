@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "del": "^5.0.0"
+    "del": "^5.0.0",
+    "gulp-html-import": "0.0.2",
+    "handlebars": "^4.1.2",
+    "jquery": "^3.4.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
@@ -12,6 +15,7 @@
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
+    "gulp-rigger": "^0.5.8",
     "gulp-uglify": "^3.0.2"
   },
   "scripts": {

@@ -8,26 +8,22 @@ const rigger = require('gulp-rigger');
 const browserSync = require('browser-sync').create();
 
 
-const htmlComponents = [
-    './src/components/breadcrumbs/breadcrumbs.html',
-    './src/components/feedback/feedback.html',
-    './src/components/footer/footer.html',
-    './src/components/header/header.html',
-    './src/components/info/info.html',
-    './src/components//main/main.html',
-    './src/components/paginator/paginator.html',
-    './src/components/sidebar/sidebar.html',
-    './src/components/slider/slider.html'
-]
-
 const cssFiles = [
-    './src/css/main.css',
-    './src/css/media.css'
+    './src/components/breadcrumbs/breadcrumbs.css',
+    './src/components/feedback/feedback.css',
+    './src/components/footer/footer.css',
+    './src/components/header/header.css',
+    './src/components/info/info.css',
+    './src/components/main/main.css',
+    './src/components/paginator/paginator.css',
+    './src/components/sidebar/sidebar.css',
+    './src/components/slider/slider.css',
+    './src/components/css/main.css'
 ]
 
 const jsFiles = [
-    './src/js/main.js',
-    './src/js/lib.js'
+    './src/components/js/main.js',
+    './src/components/js/lib.js'
 ]
 
 function styles() {
@@ -45,7 +41,7 @@ function styles() {
         level: 2
     }))
 
-    .pipe(gulp.dest('./src/dist/css'))
+    .pipe(gulp.dest('./src/components/dist/css'))
     .pipe(browserSync.stream());
 }
 
@@ -59,13 +55,13 @@ function scripts() {
         toplevel: true
     }))
     
-    .pipe(gulp.dest('./src/dist/js'))
+    .pipe(gulp.dest('./src/components/dist/js'))
     .pipe(browserSync.stream());
 
 }
 
 function clean() {
-    return del(['src/dist/*'])
+    return del(['./src/components/dist/*'])
 }
 
 function watch() {
@@ -74,8 +70,8 @@ function watch() {
             baseDir: "./src"
         }
     });
-    gulp.watch('./src/css/**/*.css', styles)
-    gulp.watch('./src/js/**/*.js', scripts)
+    gulp.watch('./src/components/css/**/*.css', styles)
+    gulp.watch('./src/cpomponents/js/**/*.js', scripts)
     gulp.watch("./src/**/*.html").on('change', browserSync.reload);
 }
 
@@ -86,12 +82,3 @@ gulp.task('del', clean);
 gulp.task('watch', watch);
 gulp.task('build', gulp.series(clean, gulp.parallel(styles,scripts)));
 gulp.task('dev', gulp.series('build', 'watch'));
-
-
- 
-gulp.task('build', function () {
-   return gulp.src(htmlComponents)
-        .pipe(rigger())
-        .pipe(gulp.dest('build/'));
-});
-
