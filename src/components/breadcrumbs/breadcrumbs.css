@@ -8,6 +8,11 @@
     font-family: "PTSans" sans-serif;
     color: rgb(118, 118, 118);
   }
+
+  .breadcrumbs a {
+    color: rgb(118, 118, 118);
+  }
+
   .breadcrumbs li {
     display: inline-block;
   }
