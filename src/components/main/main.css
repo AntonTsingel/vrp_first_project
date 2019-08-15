@@ -39,7 +39,7 @@
   
   .item_price::after {
     content: "";
-    background-image: url('img/addtobasket_mini.png');
+    background-image: url('../../../img/addtobasket_mini.png');
     width: 28px;
     height: 21px;
     background-repeat: no-repeat;
