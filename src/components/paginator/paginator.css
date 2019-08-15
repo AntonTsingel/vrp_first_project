@@ -1,7 +1,6 @@
 .paginator{
     font-size: 14px;
     font-family: "PTSans";
-    color: rgb(118, 118, 118);
     line-height: 1.5;
     text-align: center;
     margin-right: 200px;
@@ -11,6 +10,7 @@
   .paginator a {
     text-decoration: none;
     margin-right: 10px;
+    color: rgb(118, 118, 118);
   }
   
   .paginator a:hover {
