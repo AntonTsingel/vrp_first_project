@@ -18,3 +18,7 @@
     font-family: "PTSans", sans-serif;
     line-height: 1.5;
   }
+
+  .info p {
+    margin-top: 40px;
+  }
