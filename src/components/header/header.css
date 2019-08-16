@@ -1,21 +1,21 @@
 .header {
     background-color: #dcdcdc;
     position: relative;
-    height: 200px;
+    height: 230px;
   }
   
   .header__company-name {
     position:absolute;
     width: 273px;
     height: 100px;
-    left: 220px;
-    top: 40px;
+    left: 320px;
+    top: 55px;
     font-family: 'PT Sans', sans-serif;
   }
   
   .header__company-name h2 {
-    left: 220px;
-    top: 50px;
+    left: 320px;
+    top: 65px;
     line-height: 0.8;
     padding: 0;
     margin: 0;
@@ -39,17 +39,15 @@
   
   .header__feedback {
     width: 280px;
-    height: 100px;
+    height: 80px;
     position: absolute;
     right: 140px;
-    top: 20px;
-    color: rgb(118, 118, 118);
-    font-weight: bold;
+    top: 35px;
+    color: #767676;
     line-height: 1.15;
     text-align: right;
-    font-size: 32px;
-    font-family: 'PT Sans', sans-serif;
-    font-weight: lighter;
+    font-size: 40px;
+    font-family: 'Open Sans Condensed', sans-serif;
   }
 
   .header__feedback a {
@@ -57,7 +55,8 @@
     font-weight: bold;
     border-bottom: 2px dashed #777777;
     color: #767676;
-    font-size: 25px;
+    font-size: 24px;
+    line-height: 1.2;
     font-family: 'PT Sans', sans-serif;
   
   }
@@ -75,8 +74,7 @@
   }
   
   .menu__nav{
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 15px 200px;
     padding:0;
     list-style: none;
     display: inline-block;
@@ -89,9 +87,8 @@
   .menu__nav a {
     display: inline-block;
     box-sizing: border-box;
-    width: 230px;
     height: 30px;
-    padding: 0;
+    padding: 0 20px;
   
     background-color: #777777;
     border-right: 1px solid white;
