@@ -36,7 +36,7 @@
     "watch": "webpack --watch",
     "build": "webpack",
     "start": "webpack-dev-server --open",
-    "server": "node dev-server.js"
+    "server": "node server.js"
   },
   "browserslist": [
     "last 2 versions",
