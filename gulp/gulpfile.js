@@ -13,7 +13,7 @@ var declare = require('gulp-declare');
 
 const cssFiles = [
     './src/components/**/*.css',
-    './src/common/css/*.css'
+    './src/common/css/main.css'
 ]
 
 const jsFiles = [
