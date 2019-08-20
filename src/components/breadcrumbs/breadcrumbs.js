@@ -1,5 +1,5 @@
 console.log('breadcrumbs');
-var source = document.getElementById("breadcrumbs-template"); // DOM Node
+var source = document.getElementById("breadcrumbs"); // DOM Node
 var template = source.innerHTML; // STRING
 var generator = Handlebars.compile(template); // Function
 var data = {};

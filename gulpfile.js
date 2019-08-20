@@ -12,21 +12,11 @@ var declare = require('gulp-declare');
 
 
 const cssFiles = [
-    './src/components/breadcrumbs/breadcrumbs.css',
-    './src/components/feedback/feedback.css',
-    './src/components/footer/footer.css',
-    './src/components/header/header.css',
-    './src/components/info/info.css',
-    './src/components/main/main.css',
-    './src/components/paginator/paginator.css',
-    './src/components/sidebar/sidebar.css',
-    './src/components/slider/slider.css',
-    './src/components/css/main.css'
+    './src/components/**/*.css',
 ]
 
 const jsFiles = [
-    './src/components/js/main.js',
-    './src/components/js/lib.js'
+    './src/components/**/*.js'
 ]
 
 function styles() {
@@ -44,7 +34,7 @@ function styles() {
             level: 2
         }))
 
-        .pipe(gulp.dest('./src/dist/css'))
+        .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream());
 }
 
@@ -58,13 +48,13 @@ function scripts() {
             toplevel: true
         }))
 
-        .pipe(gulp.dest('./src/dist/js'))
+        .pipe(gulp.dest('./dist/js'))
         .pipe(browserSync.stream());
 
 }
 
 function clean() {
-    return del(['./src/dist/*'])
+    return del(['./dist/*'])
 }
 
 function watch() {
@@ -75,7 +65,7 @@ function watch() {
     });
     gulp.watch('./src/components/**/*.css', styles)
     gulp.watch('./src/cpomponents/**/*.js', scripts)
-    gulp.watch("./src/**/*.hbs").on('change', browserSync.reload);
+    gulp.watch("./src/**/*.html").on('change', browserSync.reload);
 }
 
  async function temp() {
@@ -87,13 +77,11 @@ function watch() {
             noRedeclare: true, 
         }))
         .pipe(concat('templates.js'))
-        .pipe(gulp.dest('./src/dist/templates/'));
-        
+        .pipe(gulp.dest('./dist/templates/'));
 }
 
+
 gulp.task('templates', temp);
-
-
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
 

@@ -1,5 +1,5 @@
 console.log('footer');
-var source = document.getElementById("footer-template"); // DOM Node
+var source = document.getElementById("footer"); // DOM Node
 var template = source.innerHTML; // STRING
 var generator = Handlebars.compile(template); // Function
 var htmlContent = generator(); // String: template with data
