@@ -1,0 +1,24 @@
+.info {
+    width: 805px;
+    -webkit-column-width: 370px;
+    -moz-column-width: 370px;
+    column-width: 370px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    margin-left: 400px;
+    margin-right: 200px;
+    border-top: 1px solid #777777;
+    padding-top: 30px;
+    margin-bottom: 205px;
+    font-size: 14px;
+    font-family: "PTSans", sans-serif;
+    line-height: 1.5;
+  }
+
+  .info p {
+    margin-top: 40px;
+  }
