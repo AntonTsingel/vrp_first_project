@@ -4,9 +4,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const del = require('del');
-const rigger = require('gulp-rigger');
 const browserSync = require('browser-sync').create();
-
 var handlebars = require('gulp-handlebars');
 var wrap = require('gulp-wrap');
 var declare = require('gulp-declare');
@@ -80,16 +78,16 @@ function watch() {
     gulp.watch("./src/**/*.hbs").on('change', browserSync.reload);
 }
 
-async function  temp() {
+ async function temp() {
     gulp.src('src/components/**/*.html')
         .pipe(handlebars())
         .pipe(wrap('Handlebars.template(<%= contents %>)'))
         .pipe(declare({
             namespace: 'MyApp.templates',
-            noRedeclare: true, // Avoid duplicate declarations
+            noRedeclare: true, 
         }))
         .pipe(concat('templates.js'))
-        .pipe(gulp.dest('./src/dist/'));
+        .pipe(gulp.dest('./src/dist/templates/'));
         
 }
 
@@ -102,4 +100,4 @@ gulp.task('scripts', scripts);
 gulp.task('del', clean);
 gulp.task('watch', watch);
 gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts)));
-gulp.task('dev', gulp.series('build', 'watch'));
+gulp.task('dev', gulp.series('build', 'templates', 'watch'));
