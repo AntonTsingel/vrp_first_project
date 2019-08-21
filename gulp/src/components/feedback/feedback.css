@@ -5,7 +5,7 @@
     background: #fff;
     border: 1px solid #777;
     z-index: 150;
-    display: none;
+    display: block;
     position: fixed;
     left: 0;
     right: 0;
