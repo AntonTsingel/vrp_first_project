@@ -17,8 +17,29 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
-      }
-    ]
+      },
+      {
+        test: /\.hbs$/,
+        use: [{
+          loader: "handlebars-loader",
+          options: {
+            helperDirs: path.resolve(__dirname, "./src/helpers")
+          }
+        }]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images',
+            }
+          }
+        ],
+      },
+    ],
+    
   },
   plugins: [
     new CleanWebpackPlugin(),
