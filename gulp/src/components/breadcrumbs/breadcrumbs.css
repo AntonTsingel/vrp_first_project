@@ -23,6 +23,6 @@
     color: #767676;
   }
   .breadcrumbs li:first-child::before {
-    content: ''; /* Убираем разделитель для первого пункта */
+    content: ''; 
   }
   

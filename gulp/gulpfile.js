@@ -9,8 +9,6 @@ var handlebars = require('gulp-handlebars');
 var wrap = require('gulp-wrap');
 var declare = require('gulp-declare');
 
-
-
 const cssFiles = [
     './src/components/**/*.css',
     './src/common/css/main.css'
@@ -29,7 +27,6 @@ function styles() {
             overrideBrowserslist: ['last 2 versions'],
             cascade: false
         }))
-
 
         .pipe(cleanCSS({
             level: 2
