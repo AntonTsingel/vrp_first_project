@@ -1,4 +1,4 @@
-#window {
+#feedback {
     width: 350px;
     height: 530px;
     margin: 280px auto;
@@ -62,4 +62,3 @@
     z-index: 100;
     overflow: auto;
   }
-  

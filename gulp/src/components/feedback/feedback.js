@@ -1,7 +1,10 @@
-console.log('feedback');
-var source = document.getElementById("window"); // DOM Node
-var template = source.innerHTML; // STRING
-var generator = Handlebars.compile(template); // Function
-var htmlContent = generator(); // String: template with data
-var elem = document.getElementById('window'); // output element: DOM Node
+var htmlContent = this.MyApp.templates.feedback(); // String: template with data
+var elem = document.getElementById('feedback'); // output element: DOM Node
 elem.innerHTML = htmlContent;
+console.log('feedback');
+
+function show(state)
+{
+  document.getElementById('feedback').style.display = state;
+  document.getElementById('gray').style.display = state;
+}
