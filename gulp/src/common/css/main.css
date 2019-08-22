@@ -1,19 +1,19 @@
-    body {
-    width: 1400px;
-    font-size: 24px;
-    font-family: 'PT Sans', sans-serif;
-    line-height: 1.15;
-    color: #777777;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
+body {
+  width: 1400px;
+  font-size: 24px;
+  font-family: "PT Sans", sans-serif;
+  line-height: 1.15;
+  color: #777777;
+  padding: 0;
+  margin: 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .container {
-position: relative;
+  position: relative;
 }
