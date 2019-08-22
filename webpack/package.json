@@ -15,19 +15,22 @@
     "css-loader": "^3.2.0",
     "csv-loader": "^3.0.2",
     "express": "^4.17.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^4.2.0",
+    "handlebars-loader": "^1.7.1",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6",
     "webpack-dev-middleware": "^3.7.0",
     "webpack-dev-server": "^3.8.0",
+    "webpack-md5-hash": "0.0.6",
     "xml-loader": "^1.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "build": "webpack",
+    "dev": "webpack --mode development",
     "start": "webpack-dev-server --open",
     "server": "node server.js"
   },

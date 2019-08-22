@@ -1,3 +1,4 @@
+import "breadcrumbs.html"
 console.log('breadcrumbs');
 var source = document.getElementById("breadcrumbs-template"); // DOM Node
 var template = source.innerHTML; // STRING

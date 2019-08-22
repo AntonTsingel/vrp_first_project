@@ -1,6 +1,18 @@
 import _ from 'lodash';
+import "./style.css";
+console.log("styles");
 
-function component() {
+
+function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+  }
+
+  const images = importAll(require.context('./img', false, /\.(png|jpe?g|svg)$/));
+
+
+  function component() {
     const element = document.createElement('div');
     const button = document.createElement('button');
     const br = document.createElement('br');
