@@ -3,9 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
-const templates = [
-  './src/components/**/.html'
-];
 
 module.exports = {
   mode: 'development',
@@ -43,6 +40,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               outputPath: './img',
+              name: "[name].[ext]"
             }
           }
         ],
@@ -57,7 +55,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/index.html', templates,
+      template: './src/index.html',
       filename: 'index.html',
       title: 'VRP first project'
     })
