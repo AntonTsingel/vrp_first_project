@@ -1,16 +1,15 @@
-<script id="header-template" type="text/x-handlebars-template"> 
 
-<header>
+<header id = "header">
     <div class="header">
   
       <div class="header__company-name">
         <a href="#"> <div class="header__logo"></div> </a>
-        <h2>Название <br>компании</h2>
-        <p>самая клёвая компания</p>
+        <h2>{{name}}</h2>
+        <p>{{description}}</p>
       </div>
         <div class="header__feedback">
-        +7(499) 777-77-77<br>
-        +7(499) 777-77-77<br>
+        {{phone}}<br>
+        {{phone}}<br>
         <a href="#" onclick="show('block')">Обратная связь</a>
       </div>
   
@@ -27,8 +26,6 @@
   </nav>
   
 </header>
-
-</script>
 
 
 

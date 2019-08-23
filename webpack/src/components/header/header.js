@@ -1,6 +1,4 @@
-var source   = document.getElementById("header-template").innerHTML;
-var template = Handlebars.compile(source);
-console.log('header');
+
 var source = document.getElementById("header-template"); // DOM Node
 var template = source.innerHTML; // STRING
 var generator = Handlebars.compile(template); // Function

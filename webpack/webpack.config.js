@@ -1,69 +1,69 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const WebpackMd5Hash = require('webpack-md5-hash');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const WebpackMd5Hash = require("webpack-md5-hash");
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   entry: {
-    main: './src/index.js',
+    main: "./src/index.js"
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   devServer: {
-    contentBase: './dist',
+    contentBase: "./dist",
     hot: true
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract(
-          {
-            fallback: 'style-loader',
-            use: ['css-loader']
-          })
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: ["css-loader"]
+        })
       },
       {
-        test: /\.html$/,
-        use: [{
-          loader: "handlebars-loader",
-          options: {
-            helperDirs: path.resolve(__dirname, "./src/helpers")
+        test: /\.hbs$/,
+        use: [
+          {
+            loader: "handlebars-loader",
           }
-        }]
+        ]
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              outputPath: './img',
+              outputPath: "./img",
               name: "[name].[ext]"
             }
           }
-        ],
+        ]
       },
-    ],
-    
+    ]
   },
   plugins: [
-    new ExtractTextPlugin({filename: 'style.[hash].css', disable: false, allChunks: true}),
+    new ExtractTextPlugin({
+      filename: "style.[hash].css",
+      disable: false,
+      allChunks: true
+    }),
     new CleanWebpackPlugin(),
     new WebpackMd5Hash(),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/index.html',
-      filename: 'index.html',
-      title: 'VRP first project'
+      template: "./src/index.html",
+      filename: "index.html",
+      title: "VRP first project"
     })
-
   ],
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].js',
-    publicPath: '/'
-  },
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].[hash].js",
+    publicPath: "/"
+  }
 };
