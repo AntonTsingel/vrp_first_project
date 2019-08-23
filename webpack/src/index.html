@@ -29,16 +29,14 @@
     <div id="info"></div>
     <div id="footer"></div>
     <div id="feedback"></div>
-    <div onclick="show('none')" id="gray"></div>
 
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 
     <script>
-      function feedbackStyle() {
+      (function feedbackStyle() {
         document.getElementById("feedback").style.display = "none";
-      }
-      feedbackStyle();
-
+      })()
+      
       function show(state) {
         document.getElementById("feedback").style.display = state;
         document.getElementById("gray").style.display = state;
