@@ -14,14 +14,17 @@
       rel="stylesheet"
       href="<%=htmlWebpackPlugin.files.chunks.main.css %>"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/lodash@4.16.6"></script>
   </head>
   <body>
     <div id="header"></div>
     <div>Testing</div>
     <div>Hello</div>
-    
-    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
   </body>
 </html>
