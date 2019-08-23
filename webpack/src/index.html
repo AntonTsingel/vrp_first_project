@@ -22,8 +22,26 @@
   </head>
   <body>
     <div id="header"></div>
-    <div>Testing</div>
-    <div>Hello</div>
+    <div id="slider"></div>
+    <div id="breadcrumbs"></div>
+    <div id="sidebar"></div>
+    <div id="main"></div>
+    <div id="info"></div>
+    <div id="footer"></div>
+    <div id="feedback"></div>
+    <div onclick="show('none')" id="gray"></div>
+
+    <script>
+      function feedbackStyle() {
+        document.getElementById("feedback").style.display = "none";
+      }
+      feedbackStyle();
+
+      function show(state) {
+        document.getElementById("feedback").style.display = state;
+        document.getElementById("gray").style.display = state;
+      }
+    </script>
 
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
   </body>

@@ -1,11 +1,11 @@
-#window {
+#feedback {
     width: 350px;
     height: 530px;
     margin: 280px auto;
     background: #fff;
     border: 1px solid #777;
     z-index: 150;
-    display: none;
+    display: block;
     position: fixed;
     left: 0;
     right: 0;
