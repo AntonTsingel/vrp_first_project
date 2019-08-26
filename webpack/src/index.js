@@ -1,3 +1,25 @@
+import './components/header';
+import './components/slider';
+import './components/breadcrumbs';
+import './components/sidebar';
+import './components/main';
+import './components/info';
+import './components/footer';
+import './components/feedback';
+
+
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  return images;
+}
+
+const images = importAll(require.context('./img', false, /\.(png|jpe?g|svg)$/));
+
+
+//import '/components/paginator'; //a part of main block;
+
+/*
 import _ from 'lodash';
 import "./style.css";
 console.log("styles");
@@ -58,3 +80,4 @@ function importAll(r) {
   }
 
   const images = importAll(require.context('./img', false, /\.(png|jpe?g|svg)$/));
+*/

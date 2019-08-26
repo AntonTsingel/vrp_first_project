@@ -1,11 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const WebpackMd5Hash = require("webpack-md5-hash");
 
 module.exports = {
-  mode: "development",
   entry: {
     main: "./src/index.js"
   },
@@ -14,6 +11,14 @@ module.exports = {
     contentBase: "./dist",
     hot: true
   },
+
+    node: {
+      fs: 'empty',
+    
+      readline: 'empty'
+  },
+
+
   module: {
     rules: [
       {
@@ -24,12 +29,13 @@ module.exports = {
         })
       },
       {
-        test: /\.hbs$/,
-        use: [
-          {
-            loader: "handlebars-loader"
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+          options: {
+           attrs: [':data-src']
           }
-        ]
+        }
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -47,23 +53,18 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: "style.[hash].css",
+      filename: "style.css",
       disable: false,
       allChunks: true
     }),
-    new CleanWebpackPlugin(),
-    new WebpackMd5Hash(),
+
     new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: "./src/index.html",
-      filename: "index.html",
-      title: "VRP first project"
+      template: "./src/index.html"
     })
   ],
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].[hash].js",
+    filename: "[name].js",
     publicPath: "/"
   }
 };

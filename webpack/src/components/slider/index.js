@@ -6,8 +6,9 @@ var htmlContent = generator(); // String: template with data
 var elem = document.getElementById('slider'); // output element: DOM Node
 elem.innerHTML = htmlContent;*/
 
-import slide from "./components/slider/slider.hbs";
-var generator = Handlebars.compile(slide());
+import template from "./slider.html";
+import './slider.css'
+var generator = Handlebars.compile(template());
 var elem = document.getElementById("slider"); // output element: DOM Node
 elem.innerHTML = generator();
 

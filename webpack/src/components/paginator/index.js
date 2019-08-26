@@ -1,5 +1,6 @@
-console.log('paginator');
-var source = document.getElementById("paginator-template"); // DOM Node
+import template from './paginator.html';
+import './paginator.css';
+
 var template = source.innerHTML; // STRING
 var generator = Handlebars.compile(template); // Function
 var htmlContent = generator(); // String: template with data
