@@ -16,7 +16,6 @@ elem.innerHTML = generator();
 
 import slide from './components/slider/slider.hbs';
 var generator = Handlebars.compile(slide());
-debugger;
 var elem = document.getElementById('slider'); // output element: DOM Node
 elem.innerHTML = generator();
 
