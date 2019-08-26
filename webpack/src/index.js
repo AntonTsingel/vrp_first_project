@@ -1,14 +1,14 @@
 import _ from 'lodash';
 import "./style.css";
 console.log("styles");
-
-
 import head from './components/header/header.hbs';
+
 var data = {
     name: "Название компании",
     description: "Самая клёвая компания",
     phone: "+7(499) 777-77-77"
 };
+
 var generator = Handlebars.compile(head(data));
 var elem = document.getElementById('header'); // output element: DOM Node
 elem.innerHTML = generator();
@@ -16,6 +16,7 @@ elem.innerHTML = generator();
 
 import slide from './components/slider/slider.hbs';
 var generator = Handlebars.compile(slide());
+debugger;
 var elem = document.getElementById('slider'); // output element: DOM Node
 elem.innerHTML = generator();
 

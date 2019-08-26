@@ -27,7 +27,7 @@ module.exports = {
         test: /\.hbs$/,
         use: [
           {
-            loader: "handlebars-loader",
+            loader: "handlebars-loader"
           }
         ]
       },
@@ -42,7 +42,7 @@ module.exports = {
             }
           }
         ]
-      },
+      }
     ]
   },
   plugins: [

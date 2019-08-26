@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Vrp first project</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js"
       integrity="sha256-/wU5o1HRMBu91AoM5TxLLP4aspWB+FH8dtrkJZGCPFg="
@@ -35,22 +36,23 @@
     <script>
       (function feedbackStyle() {
         document.getElementById("feedback").style.display = "none";
-      })()
-      
+      })();
+
       function show(state) {
         document.getElementById("feedback").style.display = state;
         document.getElementById("gray").style.display = state;
       }
     </script>
-
+    
+    
     <script>
       var slideIndex = 1;
       showSlides(slideIndex);
-      // Next/previous controls
+      
       function plusSlides(n) {
         showSlides((slideIndex += n));
       }
-      // Thumbnail image controls
+      
       function currentSlide(n) {
         showSlides((slideIndex = n));
       }
