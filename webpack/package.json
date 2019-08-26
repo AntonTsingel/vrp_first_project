@@ -33,7 +33,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
     "dev": "webpack --mode development",
-    "start": "webpack-dev-server --open",
+    "start": "npx del ./dist && webpack-dev-server --open",
     "server": "node server.js"
   },
   "browserslist": [

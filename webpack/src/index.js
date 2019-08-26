@@ -6,6 +6,7 @@ import './components/main';
 import './components/info';
 import './components/footer';
 import './components/feedback';
+//import './components/paginator';
 
 
 function importAll(r) {

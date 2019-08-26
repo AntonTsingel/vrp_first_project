@@ -1,10 +1,10 @@
-import info from './info.html';
+import ololo from './info.html';
 import './info.css';
 import handlebars from 'handlebars/dist/handlebars';
 
-var generator = handlebars.compile(info(data)); // Function
+var generator = handlebars.compile(ololo); // Function
 var data = {};
-var htmlContent = generator(data); // String: template with data
+var htmlContent = generator(data); // String: ololo with data
 var elem = document.getElementById('info'); // output element: DOM Node
 
 

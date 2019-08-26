@@ -12,6 +12,7 @@ var generator = Handlebars.compile(template());
 var elem = document.getElementById("slider"); // output element: DOM Node
 elem.innerHTML = generator();
 
+function slideFunction(){
 var slideIndex = 1;
 showSlides(slideIndex);
 // Next/previous controls
@@ -37,4 +38,6 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
-console.log("slideFunction");
+console.log("slideFunction")}
+
+slideFunction();

@@ -14,8 +14,7 @@ module.exports = {
 
     node: {
       fs: 'empty',
-    
-      readline: 'empty'
+      r00000000000000000000000000eadline: 'empty'
   },
 
 
@@ -33,7 +32,7 @@ module.exports = {
         use: {
           loader: 'html-loader',
           options: {
-           attrs: [':data-src']
+           attrs: [':custom-src'] 
           }
         }
       },
