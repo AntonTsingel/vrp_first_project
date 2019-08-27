@@ -49,3 +49,28 @@
   
   }
   
+  .paginator{
+    font-size: 14px;
+    font-family: "PTSans";
+    line-height: 1.5;
+    text-align: center;
+    margin-right: 200px;
+    padding-bottom: 50px;
+  }
+  
+  .paginator a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: rgb(118, 118, 118);
+  }
+  
+  .paginator a:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+  }
+  
+  .paginator__current {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  

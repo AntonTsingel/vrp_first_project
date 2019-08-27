@@ -6,13 +6,13 @@ var htmlContent = generator(); // String: template with data
 var elem = document.getElementById('slider'); // output element: DOM Node
 elem.innerHTML = htmlContent;*/
 
-import template from "./slider.html";
-import './slider.css'
-var generator = Handlebars.compile(template());
-var elem = document.getElementById("slider"); // output element: DOM Node
-elem.innerHTML = generator();
+import template from './slider.html';
+import './slider.css';
+var generator = Handlebars.compile(template);
+var htmlContent = generator();
+var elem = document.getElementById('slider'); // output element: DOM Node
+elem.innerHTML = htmlContent;
 
-function slideFunction(){
 var slideIndex = 1;
 showSlides(slideIndex);
 // Next/previous controls
@@ -25,8 +25,8 @@ function currentSlide(n) {
 }
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+  var slides = document.getElementsByClassName('mySlides');
+  var dots = document.getElementsByClassName('dot');
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -34,10 +34,9 @@ function showSlides(n) {
     slideIndex = slides.length;
   }
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = 'none';
   }
-  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].style.display = 'block';
 }
-console.log("slideFunction")}
+console.log('slideFunction');
 
-slideFunction();

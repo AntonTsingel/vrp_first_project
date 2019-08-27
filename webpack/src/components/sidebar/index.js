@@ -1,4 +1,4 @@
-import './sidebar.html';
+import template from './sidebar.html';
 import './sidebar.css';
 console.log('sidebar');
 var generator = Handlebars.compile(template); // Function

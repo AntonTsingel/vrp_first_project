@@ -14,9 +14,8 @@ module.exports = {
 
     node: {
       fs: 'empty',
-      r00000000000000000000000000eadline: 'empty'
+      readline: 'empty'
   },
-
 
   module: {
     rules: [
@@ -58,7 +57,8 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: "./src/index.html"
+      template: "./src/index.html",
+      chunks: false
     })
   ],
   output: {
