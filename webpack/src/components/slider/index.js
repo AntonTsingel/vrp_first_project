@@ -3,6 +3,7 @@ import template from './slider.html';
 import './slider.css';
 import './img/slide1.png';
 import './img/slide2.png';
+
 var generator = Handlebars.compile(template);
 var htmlContent = generator();
 var elem = document.getElementById('slider'); 
@@ -11,7 +12,14 @@ elem.innerHTML = htmlContent;
 var slideIndex = 1;
 showSlides(slideIndex);
 // Next/previous controls
+document.getElementById('prev').addEventListener('click', plusSlides, false);
 function plusSlides(n) {
+  n == -1;
+  showSlides((slideIndex += n));
+}
+document.getElementById('next').addEventListener('click', minusSlides, false);
+function minusSlides(n) {
+  n == 1;
   showSlides((slideIndex += n));
 }
 // Thumbnail image controls
@@ -21,7 +29,6 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName('mySlides');
-  var dots = document.getElementsByClassName('dot');
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -32,6 +39,7 @@ function showSlides(n) {
     slides[i].style.display = 'none';
   }
   slides[slideIndex - 1].style.display = 'block';
+
 }
 console.log('slideFunction');
 
