@@ -1,6 +1,8 @@
 import Handlebars from 'handlebars/dist/handlebars';
 import template from './slider.html';
 import './slider.css';
+import './img/slide1.png';
+import './img/slide2.png';
 var generator = Handlebars.compile(template);
 var htmlContent = generator();
 var elem = document.getElementById('slider'); 

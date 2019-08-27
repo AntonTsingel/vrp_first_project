@@ -4,7 +4,8 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/index.js"
+    main: "./src/index.js",
+    vendor: "./src/vendor.js"
   },
   devtool: "inline-source-map",
   devServer: {
@@ -51,7 +52,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/template/index.html",
       chunks: false
     })
   ],

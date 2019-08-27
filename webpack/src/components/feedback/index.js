@@ -1,6 +1,6 @@
-
 import template from './feedback.html';
 import './feedback.css';
+import './img/close.png';
 import Handlebars from 'handlebars/dist/handlebars';
 var generator = Handlebars.compile(template); // Function
 var htmlContent = generator(); // String: template with data

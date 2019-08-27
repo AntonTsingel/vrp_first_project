@@ -1,5 +1,6 @@
 import template from './footer.html';
 import './footer.css';
+import './img/company.png';
 import Handlebars from 'handlebars/dist/handlebars';
 
 
