@@ -7,7 +7,7 @@ import './components/info';
 import './components/footer';
 import './common/css/main.css';
 import './components/feedback';
-
+import Handlebars from 'handlebars/dist/handlebars';
 function importAll(r) {
   let images = {};
   r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });

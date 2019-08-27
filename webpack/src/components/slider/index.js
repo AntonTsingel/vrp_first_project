@@ -1,16 +1,9 @@
-/*console.log('slider');
-var source = document.getElementById("slider-template"); // DOM Node
-var template = source.innerHTML; // STRING
-var generator = Handlebars.compile(template); // Function
-var htmlContent = generator(); // String: template with data
-var elem = document.getElementById('slider'); // output element: DOM Node
-elem.innerHTML = htmlContent;*/
-
+import Handlebars from 'handlebars/dist/handlebars';
 import template from './slider.html';
 import './slider.css';
 var generator = Handlebars.compile(template);
 var htmlContent = generator();
-var elem = document.getElementById('slider'); // output element: DOM Node
+var elem = document.getElementById('slider'); 
 elem.innerHTML = htmlContent;
 
 var slideIndex = 1;

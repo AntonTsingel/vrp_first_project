@@ -1,6 +1,6 @@
 import template from './footer.html';
 import './footer.css';
-import Handlebars from 'handlebars'
+import Handlebars from 'handlebars/dist/handlebars';
 
 
 var generator = Handlebars.compile(template); // Function

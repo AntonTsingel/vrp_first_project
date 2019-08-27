@@ -1,6 +1,6 @@
 import template from './info.html';
 import './info.css';
-//import Handlebars from 'handlebars/dist/handlebars';
+import Handlebars from 'handlebars/dist/handlebars';
 
 var generator = Handlebars.compile(template); // Function
 var data = {};

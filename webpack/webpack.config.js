@@ -11,12 +11,6 @@ module.exports = {
     contentBase: "./dist",
     hot: true
   },
-
-    node: {
-      fs: 'empty',
-      readline: 'empty'
-  },
-
   module: {
     rules: [
       {
