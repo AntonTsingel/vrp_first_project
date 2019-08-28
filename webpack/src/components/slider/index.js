@@ -22,17 +22,19 @@ function minusSlides(n) {
   n == 1;
   showSlides((slideIndex += n));
 }
+
 // Thumbnail image controls
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
+
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName('mySlides');
   if (n > slides.length) {
     slideIndex = 1;
   }
-  if (n < 1) {
+    if (n < 1) {
     slideIndex = slides.length;
   }
   for (i = 0; i < slides.length; i++) {
@@ -42,4 +44,3 @@ function showSlides(n) {
 
 }
 console.log('slideFunction');
-
