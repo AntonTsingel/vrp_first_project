@@ -29,7 +29,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
     "dev": "webpack --mode development",
-    "prod": "webpack --mode production",
+    "prod": "webpack --mode production --optimize-minimize",
     "start": "npx del ./dist && webpack-dev-server --mode development --open",
     "server": "nodemon server.js"
   },

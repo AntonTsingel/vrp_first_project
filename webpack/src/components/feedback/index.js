@@ -21,4 +21,4 @@ elem.innerHTML = htmlContent;
       document.getElementById("feedback").style.display = "none";
       document.getElementById("gray").style.display = "none";
     }
-  })();
+  })(); 
