@@ -25,8 +25,8 @@ npm i
 ```
 this will install the necessary modules 
 
-And run project with command using gulp task "dev"
+And run project with command using npm script start
 ```
-npx gulp dev
+npm start
 ```
 
