@@ -14,7 +14,7 @@ var data = {
     price_list_page: "Прайс-лист",
     contacts_page: "Контакты",
     site_development: "Разработка сайта",
-    company_fullname:"компания «Пиксель Плюс»‎"
+    company_fullname: "компания «Пиксель Плюс»‎"
 }
 var htmlContent = generator(data); // String: template with data
 var elem = document.getElementById('footer'); // output element: DOM Node
