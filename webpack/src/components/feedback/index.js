@@ -3,7 +3,15 @@ import "./feedback.css";
 import "./img/close.png";
 import Handlebars from "handlebars/dist/handlebars";
 var generator = Handlebars.compile(template); // Function
-var htmlContent = generator(); // String: template with data
+var data = {
+  feedback: "ОБРАТНАЯ СВЯЗЬ",
+  input_name: "Ваше имя",
+  input_phone: "Телефон",
+  input_email: "Email",
+  input_message: "Сообщение",
+  submit: "отправить"
+}
+var htmlContent = generator(data); // String: template with data
 var elem = document.getElementById("feedback"); // output element: DOM Node
 elem.innerHTML = htmlContent;
 
@@ -21,4 +29,4 @@ elem.innerHTML = htmlContent;
       document.getElementById("feedback").style.display = "none";
       document.getElementById("gray").style.display = "none";
     }
-  })(); 
+  })();

@@ -25,7 +25,9 @@ function showSlides2() {
   slide.style.display = 'none';
   slide2.style.display = 'block';
   }
-/*
+
+
+  /*
 var slideIndex = 1;
 showSlides(slideIndex);
 // Next/previous controls

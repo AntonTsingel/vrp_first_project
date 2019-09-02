@@ -1,62 +1,29 @@
-<header id = "header">
-    <div class="header">
-  
-      <div class="header__company-name">
-        <a href="#"> <div class="header__logo"></div> </a>
-        <h2>{{name}}</h2>
-        <p>{{description}}</p>
-      </div>
-        <div class="header__feedback">
-        {{phone}}<br>
-        {{phone}}<br>
-        <a id= "feedback_link" href="#" onclick="show('block')">Обратная связь</a>
-      </div>
-  
+<header id="header">
+  <div class="header">
+
+    <div class="header__company-name">
+      <a href="#">
+        <div class="header__logo"></div>
+      </a>
+      <h2>{{name}}</h2>
+      <p>{{description}}</p>
     </div>
-  
+    <div class="header__feedback">
+      {{phone}}<br>
+      {{phone}}<br>
+      <a id="feedback_link" href="#">{{feedback}}</a>
+    </div>
+
+  </div>
+
   <nav class="menu">
-      <ul class="menu__nav">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Каталог</a></li>
-        <li><a href="#">Доставка и оплата</a></li>
-        <li><a href="#">Прайс-лист</a></li>
-        <li class="menu__nav_contacts"><a href="#">Контакты</a></li>
-      </ul>
+    <ul class="menu__nav">
+      <li><a href="#">{{main_page}}</a></li>
+      <li><a href="#">{{catalog_page}}</a></li>
+      <li><a href="#">{{delivery_page}}</a></li>
+      <li><a href="#">{{price_list_page}}</a></li>
+      <li class="menu__nav_contacts"><a href="#">{{contacts_page}}</a></li>
+    </ul>
   </nav>
-  
+
 </header>
-
-
-
-
-<!--
-<h1>HERE...</h1>
-  <div id="jopa"></div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
-
-  <script id="entry-template" type="text/x-handlebars-template">
-    <div class="entry">
-      <h1>{{hz.title}}</h1>
-      <div class="body">
-        {{hz.body}}
-      </div>
-    </div>
-  </script>
-
-  <script>
-    console.log('bla bla bla');
-    var source = document.getElementById("entry-template"); // DOM Node
-    var template = source.innerHTML; // STRING
-    var generator = Handlebars.compile(template); // Function
-    var data = {
-      hz: {
-        title: "title title title title title",
-        body: "BODY BODY BODY BODY BODY BODY BODY"
-      } // Object
-    };
-    var htmlContent = generator(data); // String: template with data
-    var elem = document.getElementById('jopa'); // output element: DOM Node
-    elem.innerHTML = htmlContent;
-  </script>
--->

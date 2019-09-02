@@ -4,25 +4,25 @@
       <img id="feedback_close" class="close" src="img/close.png" alt="" width="20px" height="20px">
     </div>
     <div class="form">
-  <h3>ОБРАТНАЯ СВЯЗЬ</h3>
+  <h3>{{feedback}}</h3>
   <form action="Layout.html" name="f1">
   
-    <label>Ваше имя<sup>*</sup>
+    <label>{{input_name}}<sup>*</sup>
       <input class="input" type="text">
     </label>
   
-    <label>Телефон<sup>*</sup>
+    <label>{{input_phone}}<sup>*</sup>
       <input class="input" type="tel">
     </label>
   
-    <label>Email<sup>*</sup>
+    <label>{{input_email}}<sup>*</sup>
       <input class="input" type="email" required placeholder="Поле обязательно для заполнения">
     </label>
   
-    <label>сообщение
-      <textarea name="message" id="message" class="message" cols="36" rows="7"></textarea>
+    <label>{{input_message}}
+      <textarea name="message" id="message" class="message" cols="29" rows="7"></textarea>
     </label>
-      <button type="submit" class="submit_button">Отправить</button>
+      <button type="submit" class="submit_button">{{submit}}</button>
   </form>
   
     </div>
