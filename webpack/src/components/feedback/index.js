@@ -23,8 +23,9 @@ elem.innerHTML = htmlContent;
   function show() {
       document.getElementById("feedback").style.display = "block";
       document.getElementById("gray").style.display = "block";
-    } 
+    }
     document.getElementById("feedback_close").addEventListener("click", hide, false);
+    document.getElementById("gray").addEventListener("click", hide, false);
   function hide() {
       document.getElementById("feedback").style.display = "none";
       document.getElementById("gray").style.display = "none";
